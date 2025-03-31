@@ -22,7 +22,7 @@ nmap -sV 10.10.97.61 --top-ports 100
 
 #### Resultaat:
 
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/nmap_results.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/nmap_results.png?raw=true)
 
 We zien dat:
 - Poort 22 open is voor `OpenSSH versie 7.6p1`
@@ -77,10 +77,10 @@ Er zijn 2 mappen die niet standaard bij een apache server horen.
 - Panel
 
 ##### Dirbuster
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/dirbuster.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/dirbuster.png?raw=true)
 
 ##### Gobuster
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/gobuster.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/gobuster.png?raw=true)
 
 Aangezien dat `panel` wat abstracter is als `uploads` bekijken we deze.
 
@@ -105,7 +105,7 @@ whoami
 ```
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/Whoami.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/Whoami.png?raw=true)
 
 #### Antwoord:
 
@@ -131,7 +131,7 @@ Navigeer naar de reeds gevonden `panel` adres van de apache server. (http://10.1
 Klik op "Bestand kiezen", voeg de `php-reverse-shell.php` toe en klik op "Upload".
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/Upload_PHP.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/Upload_PHP.png?raw=true)
 
 #### Antwoord:
 ```
@@ -156,7 +156,7 @@ Verander de naam van het scriptbestand naar `shell.php5` en probeer opnieuw.
 ### Upload the script again. What text do you see when you can successfully upload the script?
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/Upload_PHP5.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/Upload_PHP5.png?raw=true)
 
 #### Antwoord:
 ```
@@ -174,10 +174,10 @@ Zorg dat het bestand `shell.php5` is aangepast dat `127.0.0.1` is aangepast naar
 nc -lvnp 50654
 ```
 - Navigate to the uploads page on the website and execute the script
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/activate_script.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/activate_script.png?raw=true)
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/reverse_shell.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/reverse_shell.png?raw=true)
 
 >[!Tip]
 > Nu we een reverse shell hebben kunnen we de eerste stap van Task 3 uitvoeren.
@@ -192,7 +192,7 @@ ls /var/www/
 cat /var/www/user.txt
 ```
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/HiddenFlag.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/HiddenFlag.png?raw=true)
 
 
 ## Task 4: Post-exploitation: Privilege escalation
@@ -208,7 +208,7 @@ find / -perm -u=s -type f 2>/dev/null
 Let op benamingen die met scripting te maken hebben.
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/StickyBit.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/StickyBit.png?raw=true)
 
 #### Antwoord: 
 
@@ -226,7 +226,7 @@ gftobins python
 Het eerste resultaat zou het juiste moeten zijn. Klik op de link en kopieer de URL.
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/gftobins_python.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/gftobins_python.png?raw=true)
 
 #### Antwoord:
 
@@ -257,7 +257,7 @@ cat /root/root.txt
 ```
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/root_txt.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/root_txt.png?raw=true)
 
 #### Antwoord:
 ```
@@ -272,7 +272,7 @@ Hier vind je een python command.
 >Zie `python`
 
 #### Resultaat:
-![alt text](https://github.com/SvenvG0/SvenvG0/blob/main/images/SUID.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/images/SUID.png?raw=true)
 
 #### Antwoord:
 ```
