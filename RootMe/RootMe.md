@@ -22,7 +22,7 @@ nmap -sV 10.10.97.61 --top-ports 100
 
 #### Resultaat:
 
-![alt text](https://github.com/SvenvG0/THM/RootMe/blob/main/images/nmap_results.png?raw=true)
+![alt text](https://github.com/SvenvG0/THM/blob/main/RootMe/images/nmap_results.png?raw=true)
 
 We zien dat:
 - Poort 22 open is voor `OpenSSH versie 7.6p1`
